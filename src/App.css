@@ -1,0 +1,14 @@
+.anim_start{
+    animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateY(-90%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    100%{
+        transform: translateY(0%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+}

@@ -1,0 +1,43 @@
+type Succes = 
+ variant {
+   TaskCompletedSuccesfully;
+   UserLogedInSuccesfully: bool;
+ };
+type Result = 
+ variant {
+   err: Err;
+   ok: Succes;
+ };
+type Proposal = 
+ record {
+   Passed: bool;
+   body: text;
+   user_proposer: principal;
+   votes: record {
+            No: nat;
+            Yes: nat;
+          };
+ };
+type Err = 
+ variant {
+   AnonymusUser;
+   EmptyBody;
+   NotEnoughMBT;
+   ProposalAlreadyPassed;
+   ProposalNotFound;
+   Unauthorized;
+   Unexpected: text;
+ };
+type Backend = 
+ service {
+   create_proposal: (Proposal) -> (Result);
+   delete_proposal: (nat) -> (Result);
+   list_proposals: () -> (vec record {
+                                nat;
+                                Proposal;
+                              }) query;
+   login_users: () -> (Result);
+   read_proposal: (nat) -> (opt Proposal) query;
+   vote_proposal: (nat, bool) -> (Result);
+ };
+service : () -> Backend

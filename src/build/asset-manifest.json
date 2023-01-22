@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3aa60a7f.css",
+    "main.js": "/static/js/main.16244c44.js",
+    "static/media/MotokoLanguage.png": "/static/media/MotokoLanguage.baa022f8aaff1e3d38ca.png",
+    "static/media/ReactLogo.png": "/static/media/ReactLogo.428e645cb06353fc496c.png",
+    "index.html": "/index.html",
+    "main.3aa60a7f.css.map": "/static/css/main.3aa60a7f.css.map",
+    "main.16244c44.js.map": "/static/js/main.16244c44.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3aa60a7f.css",
+    "static/js/main.16244c44.js"
+  ]
+}
